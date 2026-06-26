@@ -31,6 +31,7 @@ app.use(gestionErreurs);
 const PORT = process.env.PORT || 5000;
 
 const demarrer = async () => {
+  console.log(`DB_HOST=${process.env.DB_HOST} DB_PORT=${process.env.DB_PORT} DB_NAME=${process.env.DB_NAME} DB_SSL=${process.env.DB_SSL}`);
   try {
     await sequelize.authenticate();
     console.log('✔ Connexion à la base de données réussie.');
