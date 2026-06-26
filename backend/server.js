@@ -43,7 +43,7 @@ const demarrer = async () => {
       console.log(`✔ Serveur démarré sur http://localhost:${PORT}`);
     });
   } catch (err) {
-    console.error('[Erreur] Impossible de démarrer le serveur :', err.message);
+    console.error('[Erreur] Impossible de démarrer le serveur :', err.message, err);
     process.exit(1);
   }
 };
